@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="navbar" id="navbar">
+    <img src="https://suitmedia.com/_nuxt/img/logo-white.081d3ce.png" alt="suitmedia">
+    <div class="navigation">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#ideas">Ideas</a>
+      <a href="#careers">Careers</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+
+  <section id="banner" class="parallax">
+    <div class="container">
+      <div class="banner-content"></div>
+      <h1>Ideas</h1>
+      <p>Where all our great things begin</p>
+    </div>
+    </div>
+  </section>
+
+
+
+  <div class="container">
+    <div class="filter">
+
+      <div id="showingInfo">
+      </div>
+
+      <div class="filterFunc">
+        <div>
+          <label for="perPage">Show per page:</label>
+          <select id="perPage" onchange="updatePerPage()">
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="50">50</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="sort">Sort by:</label>
+          <select id="sort" onchange="sortData()">
+            <option value="latest">Newest</option>
+            <option value="oldest">Oldest</option>
+          </select>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="items">
+      <section id="post-list" class="mt-4">
+      </section>
+
+      <div id="pagination">
+        <button id="prevButton" onclick="prevPage()" disabled>Previous</button>
+        <div id="pageNumbers"></div>
+        <button id="nextButton" onclick="nextPage()">Next</button>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
